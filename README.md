@@ -1,3 +1,5 @@
+# Exploring Various Scenarios of Tasseled Cap Transformation Integration for Detailed Land Cover Land Use Classification 
+
 This is the scripts for conducted Land Cover Land Use (LULC) Classification using Extreme Gradient Boosing Classifiers. This classification is part of my master's thesis project, which explored the capability of Tasselled Cap Transformation for
 detailed LULC mapping. The classification is conducted while using a detailed classification scheme, namely Indonesia's Official CLassification scheme (SNI 2014). A total of 19 class is separated while using multisource data 
 The scripts is organized as follows: 
