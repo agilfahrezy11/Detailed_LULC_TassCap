@@ -50,10 +50,21 @@ The following table summarizes the feature sets for each integration scenario, w
 For the classification, we implement the Extreme Gradient Boosting (XGB) classifiers first proposed by Chen and Guestrin (2016). XGB is variation of gradient boosting machine (GBM) classifier, which implement a boosting ensemble approach designed to enhance prediction accuracy by combining multiple weak learners into a strong predictive model (Schapire, 2003). The primary distinction between XGBoost and standard GBM lies in its simultaneous optimization of the loss function during the construction of the additive model (Abdi, 2020). The main consideration for utilizing XGB classifiers is some studies (Bhagwat & Uma Shankar, 2019; Samat et al., 2020; Shao et al., 2024) reported that XGB outperform other machine learning classifiers in terms of accuracy and computational efficiency. 
 <br>
 The classification framework utilized three main steps, namely parameter optimization, model evaluation, and LULC classification. Parameter optimization main goal is to find a set of parameters combination suitable for each scenario. Therefore, to explore a diverse range of parameters we used a random search approach. Key parameters requiring careful tuning for XGB include the number of trees (n_tree), learning rate, maximum tree depth (max_depth), subsample ratio of training instances (subsample), subsample ratio of features for each tree (colsample_bytree), and minimum child weight (min_child_weight) (Abdi, 2020; Colkesen & Ozturk, 2022). After selecting optimum parameters, model evaluation is conducted using a partitioned data from the original training data, not used in parameters optimization. The final steps are conducting classification for the entire raster data, in which LULC maps in generated.
-
 <p align="center">
   <img src="DataPreparation/new_workflow.svg" width="600" alt="The Workflow in the study">
 </p>
 
 ## Results
+
+<p align="center">
+  <img src="ModelLearning_and_Classification/Landsat-9LULC_v3.jpg" width="600" alt="Landsat 9 Classification Result">
+  
+  <em>Classification result of Landsat 9 Data. This map uses the 1:250,000 scale in SNI Classification Scheme</em>
+  
+  <br><br> <!-- Adds spacing between images -->
+  
+  <img src="ModelLearning_and_Classification/Rapid_eyeLULC_v4.jpg" width="600" alt="RapidEye Classification Result">  
+  
+  <em>Classification result of RapidEye Data. This map uses the 1:50,000 scale in SNI Classification Scheme</em>
+</p>
 
